@@ -2,9 +2,7 @@ package com.webPages;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-
+import org.testng.annotations.*;
 
 import static com.codeborne.selenide.Selenide.open;
 
@@ -15,11 +13,9 @@ public class SetupPage {
     public void setuptoOpenHomeSite() {
 
         String baseURL = System.getProperty("siteURL");
-
         //to open a browser
         Configuration.browser = System.getProperty("browser");
         open(baseURL);
-
     }
 
     @AfterTest
