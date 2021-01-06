@@ -15,7 +15,6 @@ public class HomePage {
     By text= byText("Chapter1");
 
 
-
     public void clickChapter1(){
 
         $(byClassName("mainheading"))
@@ -23,6 +22,7 @@ public class HomePage {
                 .shouldHave(text("Selenium: Beginners Guide"));
 
         $(text).shouldBe(visible).click();
+
     }
 }
 

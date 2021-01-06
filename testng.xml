@@ -6,7 +6,8 @@
     <test name="Run All Tests">
         <!--<parameter name="browser" value="chrome" />-->
         <classes>
-            <class name="Test.CaseOne" />
+            <class name="CaseOne" />
+            <class name="CaseTwo" />
         </classes>
     </test>
 

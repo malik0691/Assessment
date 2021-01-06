@@ -16,14 +16,11 @@ public class Chapter1Page {
     By text= byText("Chapter1");
 
 
-
-
-    public void navigateToHome(){
+    public void navigatebackToHome(){
 
         $(checkElement)
                 .shouldBe(visible)
-                .shouldHave(text("Assert that this text is on the pagesss"));
-
+                .shouldHave(text("Assert that this text is on the page"));
 
         $(NavigateBack).click();
 
