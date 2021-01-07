@@ -1,7 +1,9 @@
 import com.webPages.Chapter1Page;
 import com.webPages.HomePage;
 import com.webPages.SetupPage;
-import org.testng.annotations.*;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
 
 public class CaseOne extends SetupPage {
 
@@ -14,14 +16,19 @@ public class CaseOne extends SetupPage {
     public void testA() {
 
         home.clickChapter1();
+
+        String originaltext= "Chapter1";
+        Assert.assertEquals(originaltext,home.ChapterText());
+
     }
 
     @Test(description = "test to check the availability  of text")
     public void testB() {
 
         ch.navigatebackToHome();
+
+        String originaltext= "Assert that this text is on the page";
+        Assert.assertEquals(originaltext,ch.chapterElementText());
     }
 
 }
-
-

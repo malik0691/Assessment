@@ -10,21 +10,27 @@ import static com.codeborne.selenide.Selenide.$;
 public class Chapter1Page {
 
    //Locators for Chapter1page
-   private By checkElement= byId("divontheleft");
+   private By elementField= byId("divontheleft");
    private By navigateBack= byText("Home Page");
    private By chapter1text= byText("Chapter1");
 
+   private static String divText;
 
     public void navigatebackToHome(){
 
-        $(checkElement)
+        $(elementField)
                 .shouldBe(visible)
                 .shouldHave(text("Assert that this text is on the page"));
 
-        $(navigateBack).click();
+        divText= $(elementField).getText();
 
+        $(navigateBack).click();
         $(chapter1text).shouldBe(visible);
         }
 
-    }
+        public String chapterElementText()
+        {
+            return divText;
+        }
 
+    }

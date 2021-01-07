@@ -13,6 +13,7 @@ public class HomePage {
     //Locators for HomePage
    private By chapter1Text= byText("Chapter1");
 
+   private static String chapterText;
 
     public void clickChapter1(){
 
@@ -20,8 +21,14 @@ public class HomePage {
                 .shouldBe(visible)
                 .shouldHave(text("Selenium: Beginners Guide"));
 
+        chapterText= $(chapter1Text).getText();
+
         $(chapter1Text).shouldBe(visible).click();
-
     }
-}
 
+    public String ChapterText()
+    {
+         return chapterText;
+    }
+
+}

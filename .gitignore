@@ -18,3 +18,5 @@ build/reports/tests/
 build/
 TestAssignment.iml/
 .idea
+*.iml
+target/TestAssignment.iml
