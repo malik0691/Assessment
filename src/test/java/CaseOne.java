@@ -17,8 +17,8 @@ public class CaseOne extends SetupPage {
 
         home.clickChapter1();
 
-        String originaltext= "Chapter1";
-        Assert.assertEquals(originaltext,home.ChapterText());
+        String originalText= "Chapter1";
+        Assert.assertEquals(home.ChapterText(),originalText);
 
     }
 
@@ -27,8 +27,8 @@ public class CaseOne extends SetupPage {
 
         ch.navigatebackToHome();
 
-        String originaltext= "Assert that this text is on the page";
-        Assert.assertEquals(originaltext,ch.chapterElementText());
+        String originalText= "Assert that this text is on the page";
+        Assert.assertEquals(ch.chapterElementText(), originalText);
     }
 
 }
